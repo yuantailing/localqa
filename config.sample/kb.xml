@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dish="http://csaixyz.org/dish#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/米饭">
+		<dish:name>米饭</dish:name>
+		<dish:original_name>米饭</dish:original_name>
+		<dish:dishtype>主食</dish:dishtype>
+		<dish:has_taste>无</dish:has_taste>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2</dish:price>
+		<dish:has_major>饭</dish:has_major>
+		<dish:ingredient>米,饭</dish:ingredient>
+		<dish:unit>碗</dish:unit>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/小米粥">
+		<dish:name>小米粥</dish:name>
+		<dish:original_name>小米粥</dish:original_name>
+		<dish:dishtype>主食</dish:dishtype>
+		<dish:dishtype>粥</dish:dishtype>
+		<dish:has_taste>无</dish:has_taste>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5</dish:price>
+		<dish:has_major>小米</dish:has_major>
+		<dish:has_major>饭</dish:has_major>
+		<dish:ingredient>小米,大米,水</dish:ingredient>
+		<dish:unit>碗</dish:unit>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/皮蛋瘦肉粥">
+		<dish:name>皮蛋瘦肉粥</dish:name>
+		<dish:original_name>皮蛋瘦肉粥</dish:original_name>
+		<dish:dishtype>主食</dish:dishtype>
+		<dish:dishtype>粥</dish:dishtype>
+		<dish:has_taste>无</dish:has_taste>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8</dish:price>
+		<dish:has_major>皮蛋</dish:has_major>
+		<dish:has_major>猪肉</dish:has_major>
+		<dish:has_major>饭</dish:has_major>
+		<dish:ingredient>大米,皮蛋,猪肉,水</dish:ingredient>
+		<dish:unit>碗</dish:unit>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/鲜榨葡萄汁">
+		<dish:name>鲜榨葡萄汁</dish:name>
+		<dish:original_name>鲜榨葡萄汁</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>鲜榨果汁</dish:dishtype>
+		<dish:dishtype>果汁</dish:dishtype>
+		<dish:dishtype>饮料</dish:dishtype>
+		<dish:dishtype>冷饮</dish:dishtype>
+		<dish:has_taste>甜</dish:has_taste>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20</dish:price>
+		<dish:has_major>葡萄</dish:has_major>
+		<dish:ingredient>葡萄</dish:ingredient>
+		<dish:unit>杯</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/鲜榨西瓜汁">
+		<dish:name>鲜榨西瓜汁</dish:name>
+		<dish:original_name>鲜榨西瓜汁</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>鲜榨果汁</dish:dishtype>
+		<dish:dishtype>果汁</dish:dishtype>
+		<dish:dishtype>饮料</dish:dishtype>
+		<dish:dishtype>冷饮</dish:dishtype>
+		<dish:has_taste>甜</dish:has_taste>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20</dish:price>
+		<dish:has_major>西瓜</dish:has_major>
+		<dish:ingredient>西瓜</dish:ingredient>
+		<dish:unit>杯</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/现磨豆浆">
+		<dish:name>现磨豆浆</dish:name>
+		<dish:weight>中杯</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10</dish:price>
+		<dish:original_name>现磨豆浆</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>饮料</dish:dishtype>
+		<dish:dishtype>豆制品</dish:dishtype>
+		<dish:dishtype>冷饮</dish:dishtype>
+		<dish:dishtype>热饮</dish:dishtype>
+		<dish:has_taste>甜</dish:has_taste>
+		<dish:has_major>黄豆</dish:has_major>
+		<dish:unit>杯</dish:unit>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/百事可乐（听装）">
+		<dish:name>百事可乐（听装）</dish:name>
+		<dish:original_name>百事可乐</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>饮料</dish:dishtype>
+		<dish:dishtype>碳酸饮料</dish:dishtype>
+		<dish:has_taste>酸</dish:has_taste>
+		<dish:weight>听装</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>听</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://csaixyz.org/dish/百事可乐（小瓶装）">
+		<dish:name>百事可乐（小瓶装）</dish:name>
+		<dish:original_name>百事可乐</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>饮料</dish:dishtype>
+		<dish:dishtype>碳酸饮料</dish:dishtype>
+		<dish:has_taste>酸</dish:has_taste>
+		<dish:weight>小瓶</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>瓶</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/百事可乐（大瓶装）">
+		<dish:name>百事可乐（大瓶装）</dish:name>
+		<dish:original_name>百事可乐</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>饮料</dish:dishtype>
+		<dish:dishtype>碳酸饮料</dish:dishtype>
+		<dish:has_taste>酸</dish:has_taste>
+		<dish:weight>大瓶</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>瓶</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/可口可乐（听装）">
+		<dish:name>可口可乐（听装）</dish:name>
+		<dish:original_name>可口可乐</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>饮料</dish:dishtype>
+		<dish:dishtype>碳酸饮料</dish:dishtype>
+		<dish:has_taste>酸</dish:has_taste>
+		<dish:weight>听装</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>听</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/可口可乐（小瓶装）">
+		<dish:name>可口可乐（小瓶装）</dish:name>
+		<dish:original_name>可口可乐</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>饮料</dish:dishtype>
+		<dish:dishtype>碳酸饮料</dish:dishtype>
+		<dish:has_taste>酸</dish:has_taste>
+		<dish:weight>小瓶</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>瓶</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/可口可乐（大瓶装）">
+		<dish:name>可口可乐（大瓶装）</dish:name>
+		<dish:original_name>可口可乐</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>饮料</dish:dishtype>
+		<dish:dishtype>碳酸饮料</dish:dishtype>
+		<dish:has_taste>酸</dish:has_taste>
+		<dish:weight>大瓶</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>瓶</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/果粒橙（大瓶装）">
+		<dish:name>果粒橙（大瓶装）</dish:name>
+		<dish:original_name>果粒橙</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>饮料</dish:dishtype>
+		<dish:dishtype>果汁</dish:dishtype>
+		<dish:has_taste>甜</dish:has_taste>
+		<dish:weight>大瓶</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>瓶</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/果粒橙（小瓶装）">
+		<dish:name>果粒橙（小瓶装）</dish:name>
+		<dish:original_name>果粒橙</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>饮料</dish:dishtype>
+		<dish:dishtype>果汁</dish:dishtype>
+		<dish:has_taste>甜</dish:has_taste>
+		<dish:weight>小瓶</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>瓶</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/燕京啤酒">
+		<dish:name>燕京啤酒</dish:name>
+		<dish:original_name>燕京啤酒</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>酒</dish:dishtype>
+		<dish:dishtype>啤酒</dish:dishtype>
+		<dish:has_taste>无</dish:has_taste>
+		<dish:weight>瓶装</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>瓶</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/燕京啤酒（箱装）">
+		<dish:name>燕京啤酒（箱装）</dish:name>
+		<dish:original_name>燕京啤酒</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>酒</dish:dishtype>
+		<dish:dishtype>啤酒</dish:dishtype>
+		<dish:has_taste>无</dish:has_taste>
+		<dish:weight>箱装</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">180</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>箱</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>12</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/青岛啤酒">
+		<dish:name>青岛啤酒</dish:name>
+		<dish:original_name>青岛啤酒</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>酒</dish:dishtype>
+		<dish:dishtype>啤酒</dish:dishtype>
+		<dish:has_taste>无</dish:has_taste>
+		<dish:weight>瓶装</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>瓶</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/青岛啤酒（箱装）">
+		<dish:name>青岛啤酒（箱装）</dish:name>
+		<dish:original_name>青岛啤酒</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>酒</dish:dishtype>
+		<dish:dishtype>啤酒</dish:dishtype>
+		<dish:has_taste>无</dish:has_taste>
+		<dish:weight>箱装</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">180</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>箱</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>12</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/哈尔滨啤酒">
+		<dish:name>哈尔滨啤酒</dish:name>
+		<dish:original_name>哈尔滨啤酒</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>酒</dish:dishtype>
+		<dish:dishtype>啤酒</dish:dishtype>
+		<dish:has_taste>无</dish:has_taste>
+		<dish:weight>瓶装</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>瓶</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/哈尔滨啤酒（箱装）">
+		<dish:name>哈尔滨啤酒（箱装）</dish:name>
+		<dish:original_name>哈尔滨啤酒</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>酒</dish:dishtype>
+		<dish:dishtype>啤酒</dish:dishtype>
+		<dish:has_taste>无</dish:has_taste>
+		<dish:weight>箱装</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">180</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>箱</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:has_temperature>冰</dish:has_temperature>
+		<dish:for_n>12</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/茅台">
+		<dish:name>茅台</dish:name>
+		<dish:original_name>茅台</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>酒</dish:dishtype>
+		<dish:dishtype>白酒</dish:dishtype>
+		<dish:has_taste>无</dish:has_taste>
+		<dish:weight>瓶装</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">80</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>瓶</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:for_n>4</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/五粮液">
+		<dish:name>五粮液</dish:name>
+		<dish:original_name>五粮液</dish:original_name>
+		<dish:dishtype>酒水</dish:dishtype>
+		<dish:dishtype>酒</dish:dishtype>
+		<dish:dishtype>白酒</dish:dishtype>
+		<dish:has_taste>无</dish:has_taste>
+		<dish:weight>瓶装</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">80</dish:price>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>无</dish:ingredient>
+		<dish:unit>瓶</dish:unit>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:for_n>4</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/麻辣香锅（麻辣）（大）">
+		<dish:name>麻辣香锅（麻辣）（大）</dish:name>
+		<dish:original_name>麻辣香锅</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>特色菜</dish:dishtype>
+		<dish:has_taste>麻辣</dish:has_taste>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50</dish:price>
+		<dish:has_major>猪肉</dish:has_major>
+		<dish:ingredient>猪肉,面饼,辣椒</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>4</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/麻辣香锅（麻辣）（小）">
+		<dish:name>麻辣香锅（麻辣）（小）</dish:name>
+		<dish:original_name>麻辣香锅</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>特色菜</dish:dishtype>
+		<dish:has_taste>麻辣</dish:has_taste>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30</dish:price>
+		<dish:has_major>猪肉</dish:has_major>
+		<dish:ingredient>猪肉,面饼,辣椒</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/麻辣香锅（酱香）（大）">
+		<dish:name>麻辣香锅（酱香）（大）</dish:name>
+		<dish:original_name>麻辣香锅</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>特色菜</dish:dishtype>
+		<dish:has_taste>酱香</dish:has_taste>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50</dish:price>
+		<dish:has_major>猪肉</dish:has_major>
+		<dish:ingredient>猪肉,面饼,辣椒</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>4</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/麻辣香锅（酱香）（小）">
+		<dish:name>麻辣香锅（酱香）（小）</dish:name>
+		<dish:original_name>麻辣香锅</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>特色菜</dish:dishtype>
+		<dish:has_taste>酱香</dish:has_taste>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30</dish:price>
+		<dish:has_major>猪肉</dish:has_major>
+		<dish:ingredient>猪肉,面饼,辣椒</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/油焖大虾">
+		<dish:name>油焖大虾</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">90</dish:price>
+		<dish:original_name>油焖大虾</dish:original_name>
+		<dish:dishtype>海鲜</dish:dishtype>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>甜</dish:has_taste>
+		<dish:has_major>虾</dish:has_major>
+		<dish:ingredient>对虾,料酒,白糖,生抽,盐,葱,姜,香油</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/腊肉炒菜花">
+		<dish:name>腊肉炒菜花</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40</dish:price>
+		<dish:original_name>腊肉炒菜花</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>咸鲜</dish:has_taste>
+		<dish:has_major>腊肉</dish:has_major>
+		<dish:has_major>菜花</dish:has_major>
+		<dish:ingredient>腊肉,菜花,青椒,蒜头,盐,白糖,生粉</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/糖醋排骨">
+		<dish:name>糖醋排骨</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45</dish:price>
+		<dish:original_name>糖醋排骨</dish:original_name>
+		<dish:dishtype>淮扬菜</dish:dishtype>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>酸甜</dish:has_taste>
+		<dish:has_major>排骨</dish:has_major>
+		<dish:ingredient>猪大排,白糖,香醋,干辣椒,盐,八角,姜,小葱,白醋</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:description>糖醋排骨是糖醋味型中的传统名菜，选用新鲜猪子排作料，肉质鲜嫩，色泽红亮油润。</dish:description>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/千叶豆腐">
+		<dish:name>千叶豆腐</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35</dish:price>
+		<dish:original_name>千叶豆腐</dish:original_name>
+		<dish:dishtype>素菜</dish:dishtype>
+		<dish:dishtype>豆制品</dish:dishtype>
+		<dish:has_taste>咸鲜</dish:has_taste>
+		<dish:has_major>豆腐</dish:has_major>
+		<dish:ingredient>豆腐,青椒,洋葱</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:description>千叶豆腐不仅保持了豆腐原本的细嫩，更具备特有的Q劲和爽脆，是高品质的新时尚美味。</dish:description>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/麻婆豆腐">
+		<dish:name>麻婆豆腐</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25</dish:price>
+		<dish:original_name>麻婆豆腐</dish:original_name>
+		<dish:dishtype>川菜</dish:dishtype>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>豆制品</dish:dishtype>
+		<dish:has_taste>麻辣</dish:has_taste>
+		<dish:has_major>豆腐</dish:has_major>
+		<dish:ingredient>豆腐,猪肉,花椒,辣椒粉</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:description>麻婆豆腐是四川省传统名菜之一，制作原料主要有豆腐、肉末、辣椒和花椒等。</dish:description>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/地三鲜">
+		<dish:name>地三鲜</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23</dish:price>
+		<dish:original_name>地三鲜</dish:original_name>
+		<dish:dishtype>鲁菜</dish:dishtype>
+		<dish:dishtype>素菜</dish:dishtype>
+		<dish:has_taste>咸鲜</dish:has_taste>
+		<dish:has_major>土豆</dish:has_major>
+		<dish:has_major>茄子</dish:has_major>
+		<dish:has_major>青椒</dish:has_major>
+		<dish:ingredient>土豆,青椒,茄子,酱油,淀粉,食盐,葱,蒜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:description>地三鲜是一道传统家常菜，选用了茄子、土豆和青椒来搭配，味道鲜浓，富含营养</dish:description>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/香煎黄花鱼">
+		<dish:name>香煎黄花鱼</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">53</dish:price>
+		<dish:original_name>香煎黄花鱼</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>家常</dish:has_taste>
+		<dish:has_major>鱼</dish:has_major>
+		<dish:has_major>黄花鱼</dish:has_major>
+		<dish:ingredient>黄花鱼,葱,盐,酱油,胡椒粉,姜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/回锅肉盖饭">
+		<dish:name>回锅肉盖饭</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">33</dish:price>
+		<dish:original_name>回锅肉盖饭</dish:original_name>
+		<dish:dishtype>主食</dish:dishtype>
+		<dish:dishtype>盖饭</dish:dishtype>
+		<dish:dishtype>川菜</dish:dishtype>
+		<dish:has_taste>家常</dish:has_taste>
+		<dish:has_major>猪肉</dish:has_major>
+		<dish:ingredient>猪肉,蒜苗,青椒,葱,油,食盐</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://csaixyz.org/dish/宫保鸡丁">
+		<dish:name>宫保鸡丁</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">54</dish:price>
+		<dish:original_name>宫保鸡丁</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>川菜</dish:dishtype>
+		<dish:has_taste>麻辣</dish:has_taste>
+		<dish:has_major>鸡肉</dish:has_major>
+		<dish:ingredient>鸡腿,白糖,胡萝卜,花生,盐,葱,尖椒,姜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:description>宫保鸡丁是一道闻名中外的特色传统名菜，选用鸡肉为主料，佐以花生米、黄瓜、辣椒等辅料烹制而成。</dish:description>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/快乐儿童套餐">
+		<dish:name>快乐儿童套餐</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20</dish:price>
+		<dish:original_name>快乐儿童套餐</dish:original_name>
+		<dish:dishtype>套餐</dish:dishtype>
+		<dish:dishtype>儿童餐饮</dish:dishtype>
+		<dish:has_taste>甜</dish:has_taste>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>面包,鸡蛋,胡萝卜,蔬菜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:description>快乐儿童套餐是由胡萝卜、各种蔬菜制作而成的营养套餐</dish:description>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/法式焦糖布丁">
+		<dish:name>法式焦糖布丁</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13</dish:price>
+		<dish:original_name>法式焦糖布丁</dish:original_name>
+		<dish:dishtype>点心</dish:dishtype>
+		<dish:has_taste>甜</dish:has_taste>
+		<dish:has_major>无</dish:has_major>
+		<dish:ingredient>鸡蛋,淡奶油,牛奶,香草精,细砂糖</dish:ingredient>
+		<dish:has_temperature>常温</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/芒果蛋挞">
+		<dish:name>芒果蛋挞</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15</dish:price>
+		<dish:original_name>芒果蛋挞</dish:original_name>
+		<dish:dishtype>点心</dish:dishtype>
+		<dish:has_taste>奶香</dish:has_taste>
+		<dish:has_major>蛋挞</dish:has_major>
+		<dish:ingredient>蛋挞皮,鸡蛋黄,淡奶油,纯牛奶,芒果,细砂糖,蛋糕粉</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/八宝菠菜">
+		<dish:name>八宝菠菜</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18</dish:price>
+		<dish:original_name>八宝菠菜</dish:original_name>
+		<dish:dishtype>素菜</dish:dishtype>
+		<dish:dishtype>青菜</dish:dishtype>
+		<dish:has_taste>家常</dish:has_taste>
+		<dish:has_major>菠菜</dish:has_major>
+		<dish:ingredient>菠菜,生抽,胡萝卜,色拉油,香肠,香菇,食盐,花生仁,虾</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:description>八宝菠菜是一道山东名菜，色彩丰富、鲜艳，味道鲜美，清淡爽口</dish:description>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/蛋炒饭">
+		<dish:name>蛋炒饭</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12</dish:price>
+		<dish:original_name>蛋炒饭</dish:original_name>
+		<dish:dishtype>主食</dish:dishtype>
+		<dish:dishtype>炒饭</dish:dishtype>
+		<dish:has_taste>咸鲜</dish:has_taste>
+		<dish:has_major>鸡蛋</dish:has_major>
+		<dish:has_major>饭</dish:has_major>
+		<dish:ingredient>鸡蛋,米饭,葱,植物油,姜,食盐</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/白菜拌黄瓜">
+		<dish:name>白菜拌黄瓜</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12</dish:price>
+		<dish:original_name>白菜拌黄瓜</dish:original_name>
+		<dish:dishtype>凉菜</dish:dishtype>
+		<dish:has_taste>清淡</dish:has_taste>
+		<dish:has_major>白菜</dish:has_major>
+		<dish:has_major>黄瓜</dish:has_major>
+		<dish:ingredient>白菜,黄瓜,米醋,白糖,酱油,食盐,香油,香菜,蒜</dish:ingredient>
+		<dish:has_temperature>凉</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/大拌菜">
+		<dish:name>大拌菜</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25</dish:price>
+		<dish:original_name>大拌菜</dish:original_name>
+		<dish:dishtype>凉菜</dish:dishtype>
+		<dish:has_taste>家常</dish:has_taste>
+		<dish:has_major>生菜</dish:has_major>
+		<dish:ingredient>苦菊,甘蓝,黄瓜,萝卜,生抽,生菜,白芝麻,圣女果,花生仁</dish:ingredient>
+		<dish:has_temperature>凉</dish:has_temperature>
+		<dish:description>大拌菜是一道绿色食品，含有 紫甘蓝、黄椒、红椒、生菜、黑木耳、樱桃、萝卜等蔬菜</dish:description>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/蔬菜沙拉">
+		<dish:name>蔬菜沙拉</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20</dish:price>
+		<dish:original_name>蔬菜沙拉</dish:original_name>
+		<dish:dishtype>凉菜</dish:dishtype>
+		<dish:dishtype>沙拉</dish:dishtype>
+		<dish:has_taste>甜</dish:has_taste>
+		<dish:has_major>生菜</dish:has_major>
+		<dish:has_major>黄瓜</dish:has_major>
+		<dish:ingredient>生菜,黄瓜,洋葱,红椒,沙拉酱</dish:ingredient>
+		<dish:has_temperature>凉</dish:has_temperature>
+		<dish:description>蔬菜沙拉是由生菜、黄瓜、洋葱、沙拉酱等搅拌而成的健康食品</dish:description>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/水果沙拉">
+		<dish:name>水果沙拉</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">21</dish:price>
+		<dish:original_name>水果沙拉</dish:original_name>
+		<dish:dishtype>凉菜</dish:dishtype>
+		<dish:dishtype>沙拉</dish:dishtype>
+		<dish:has_taste>甜</dish:has_taste>
+		<dish:has_major>苹果</dish:has_major>
+		<dish:has_major>西瓜</dish:has_major>
+		<dish:has_major>香蕉</dish:has_major>
+		<dish:has_major>哈密瓜</dish:has_major>
+		<dish:ingredient>苹果,西瓜,香蕉,哈密瓜,沙拉酱</dish:ingredient>
+		<dish:has_temperature>凉</dish:has_temperature>
+		<dish:description>水果沙拉是由苹果、西瓜、香蕉、哈密瓜等搅拌而成的健康食品</dish:description>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://csaixyz.org/dish/蒜拌油麦菜">
+		<dish:name>蒜拌油麦菜</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22</dish:price>
+		<dish:original_name>蒜拌油麦菜</dish:original_name>
+		<dish:dishtype>凉菜</dish:dishtype>
+		<dish:dishtype>青菜</dish:dishtype>
+		<dish:has_taste>蒜香</dish:has_taste>
+		<dish:has_major>油麦菜</dish:has_major>
+		<dish:ingredient>油麦菜,花椒,糖,大蒜,蚝油,盐,味极鲜,油,小葱</dish:ingredient>
+		<dish:has_temperature>凉</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/葱油鸡">
+		<dish:name>葱油鸡</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">64</dish:price>
+		<dish:original_name>葱油鸡</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>葱香</dish:has_taste>
+		<dish:has_major>鸡肉</dish:has_major>
+		<dish:ingredient>鸡,红葱头,蒸鱼豉油,柠檬皮,盐,沙姜,糖,姜黄粉,姜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:description>葱油鸡是广东省传统名菜，属于粤菜系。此菜用材简单，制作方便，滑润细嫩，清鲜醇厚，葱香四溢。</dish:description>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/白切鸡">
+		<dish:name>白切鸡</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">70</dish:price>
+		<dish:original_name>白切鸡</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>咸鲜</dish:has_taste>
+		<dish:has_major>鸡肉</dish:has_major>
+		<dish:ingredient>鸡,白糖,冰块,姜,食盐,小葱,水</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:description>白切鸡是一道色香味俱全的传统名肴，属于粤菜系鸡肴中最普通的一种，属浸鸡类，以其制作简易，刚熟不烂，不加配料且保持原味为特点。</dish:description>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/辣子鸡">
+		<dish:name>辣子鸡</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">99</dish:price>
+		<dish:original_name>辣子鸡</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>特色菜</dish:dishtype>
+		<dish:has_taste>咸鲜</dish:has_taste>
+		<dish:has_major>甲鱼</dish:has_major>
+		<dish:has_major>鸡肉</dish:has_major>
+		<dish:ingredient>鸡肉,辣椒,清汤,冬笋,油菜苔,姜,黄酒,冬菇</dish:ingredient>
+		<dish:description>辣子鸡盘子里的干辣椒看上去要比鸡块多，鸡块外焦里嫩，麻辣可口</dish:description>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/西芹百合">
+		<dish:name>西芹百合</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">21</dish:price>
+		<dish:original_name>西芹百合</dish:original_name>
+		<dish:dishtype>素菜</dish:dishtype>
+		<dish:dishtype>青菜</dish:dishtype>
+		<dish:has_taste>清淡</dish:has_taste>
+		<dish:has_major>西芹</dish:has_major>
+		<dish:has_major>百合</dish:has_major>
+		<dish:ingredient>百合,甜椒,西芹,盐,食用油</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/豆腐鲫鱼汤">
+		<dish:name>豆腐鲫鱼汤</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40</dish:price>
+		<dish:original_name>豆腐鲫鱼汤</dish:original_name>
+		<dish:dishtype>汤</dish:dishtype>
+		<dish:has_taste>咸鲜</dish:has_taste>
+		<dish:has_major>鱼</dish:has_major>
+		<dish:has_major>鲫鱼</dish:has_major>
+		<dish:ingredient>鲫鱼,豆腐,白萝卜,西红柿,植物油,水,姜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:unit>例</dish:unit>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/剁椒鱼头">
+		<dish:name>剁椒鱼头</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">56</dish:price>
+		<dish:original_name>剁椒鱼头</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>湘菜</dish:dishtype>
+		<dish:has_taste>香辣</dish:has_taste>
+		<dish:has_major>鱼</dish:has_major>
+		<dish:has_major>鳙鱼</dish:has_major>
+		<dish:has_major>鱼头</dish:has_major>
+		<dish:ingredient>鳙鱼,蒜,植物油,姜,葱,剁椒,料酒,泡姜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/葱爆鲫鱼">
+		<dish:name>葱爆鲫鱼</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60</dish:price>
+		<dish:original_name>葱爆鲫鱼</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>葱香</dish:has_taste>
+		<dish:has_major>鱼</dish:has_major>
+		<dish:has_major>鲫鱼</dish:has_major>
+		<dish:ingredient>鲫鱼,白糖,味精,酱油,清汤,醋,糖色,芝麻油,黄酒,小葱</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/水煮鱼">
+		<dish:name>水煮鱼</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">88</dish:price>
+		<dish:original_name>水煮鱼</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>川菜</dish:dishtype>
+		<dish:dishtype>特色菜</dish:dishtype>
+		<dish:has_taste>香辣</dish:has_taste>
+		<dish:has_major>鱼</dish:has_major>
+		<dish:has_major>鲶鱼</dish:has_major>
+		<dish:ingredient>鲶鱼,黄豆芽,生菜,色拉油,姜,芹菜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/酱汁肘子">
+		<dish:name>酱汁肘子</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">46</dish:price>
+		<dish:original_name>酱汁肘子</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>甜</dish:has_taste>
+		<dish:has_major>肘子</dish:has_major>
+		<dish:ingredient>猪肉(后肘),卤汁,食盐</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/广东烤鸭">
+		<dish:name>广东烤鸭</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">51</dish:price>
+		<dish:original_name>广东烤鸭</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>粤菜</dish:dishtype>
+		<dish:has_taste>家常</dish:has_taste>
+		<dish:has_major>鸭肉</dish:has_major>
+		<dish:ingredient>鸭,白糖,蒜子,八角,酱油,黑椒粉,蚝油,盐,生姜,蜂蜜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/广东蒸排骨">
+		<dish:name>广东蒸排骨</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52</dish:price>
+		<dish:original_name>广东蒸排骨</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>粤菜</dish:dishtype>
+		<dish:has_taste>家常</dish:has_taste>
+		<dish:has_major>排骨</dish:has_major>
+		<dish:ingredient>排骨,生抽,白糖,老抽,土豆淀粉,花生油</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/湖南小炒肉">
+		<dish:name>湖南小炒肉</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">33</dish:price>
+		<dish:original_name>湖南小炒肉</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>湘菜</dish:dishtype>
+		<dish:has_taste>香辣</dish:has_taste>
+		<dish:has_major>猪肉</dish:has_major>
+		<dish:ingredient>猪肉,红尖椒,尖椒,食用油,鸡粉,朝天椒,食盐,豆豉,蒜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/水煮肉片">
+		<dish:name>水煮肉片</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50</dish:price>
+		<dish:original_name>水煮肉片</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>香辣</dish:has_taste>
+		<dish:has_major>猪肉</dish:has_major>
+		<dish:ingredient>猪肉,大白菜,干花椒,花椒粉,姜,干辣椒,豆瓣酱,葱,辣椒粉</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/鱼香肉丝">
+		<dish:name>鱼香肉丝</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">43</dish:price>
+		<dish:original_name>鱼香肉丝</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>川菜</dish:dishtype>
+		<dish:has_taste>不辣</dish:has_taste>
+		<dish:has_major>猪肉</dish:has_major>
+		<dish:ingredient>猪肉,黄瓜,木耳(水发),胡萝卜,彩椒,葱,植物油,白糖,淀粉,食盐</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/回锅肉">
+		<dish:name>回锅肉</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50</dish:price>
+		<dish:original_name>回锅肉</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:dishtype>川菜</dish:dishtype>
+		<dish:has_taste>不辣</dish:has_taste>
+		<dish:has_major>猪肉</dish:has_major>
+		<dish:ingredient>猪肉,黄瓜,木耳(水发),胡萝卜,彩椒,葱,植物油,白糖,淀粉,食盐</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/烤米粉肉">
+		<dish:name>烤米粉肉</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52</dish:price>
+		<dish:original_name>烤米粉肉</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>香辣</dish:has_taste>
+		<dish:has_major>猪肉</dish:has_major>
+		<dish:ingredient>糯米粉,五花肉,料酒,酱油,盐,咖喱粉,蜂蜜,辣椒粉</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:description>烤米粉肉由五花肉和糯米粉烤制而成，味道香浓，米香四溢。</dish:description>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/醋溜土豆丝">
+		<dish:name>醋溜土豆丝</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19</dish:price>
+		<dish:original_name>醋溜土豆丝</dish:original_name>
+		<dish:dishtype>素菜</dish:dishtype>
+		<dish:has_taste>家常</dish:has_taste>
+		<dish:has_major>土豆丝</dish:has_major>
+		<dish:ingredient>土豆,香油,蒜头,食用油,米醋</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/青椒土豆丝">
+		<dish:name>青椒土豆丝</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22</dish:price>
+		<dish:original_name>青椒土豆丝</dish:original_name>
+		<dish:dishtype>素菜</dish:dishtype>
+		<dish:has_taste>家常</dish:has_taste>
+		<dish:has_major>土豆丝</dish:has_major>
+		<dish:has_major>青椒</dish:has_major>
+		<dish:ingredient>土豆,青椒,香油,蒜头,食用油,青椒,米醋,红椒</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/粉蒸牛肉">
+		<dish:name>粉蒸牛肉</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">68</dish:price>
+		<dish:original_name>粉蒸牛肉</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>麻辣</dish:has_taste>
+		<dish:has_major>牛肉</dish:has_major>
+		<dish:ingredient>牛肉,姜,食盐,豆瓣酱,红糖,黄酒,葱,香菜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>4</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/黑椒牛肉炒饭">
+		<dish:name>黑椒牛肉炒饭</dish:name>
+		<dish:weight>大</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22</dish:price>
+		<dish:original_name>黑椒牛肉炒饭</dish:original_name>
+		<dish:dishtype>主食</dish:dishtype>
+		<dish:dishtype>炒饭</dish:dishtype>
+		<dish:has_taste>黑椒</dish:has_taste>
+		<dish:has_major>饭</dish:has_major>
+		<dish:has_major>牛肉</dish:has_major>
+		<dish:ingredient>生菜,大米,胡萝卜,西芹,鸡蛋,卤牛肉,洋葱,黑胡椒,盐,料酒,芝麻油</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/番茄鸡蛋面">
+		<dish:name>番茄鸡蛋面</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16</dish:price>
+		<dish:original_name>番茄鸡蛋面</dish:original_name>
+		<dish:dishtype>主食</dish:dishtype>
+		<dish:dishtype>面食</dish:dishtype>
+		<dish:has_taste>家常</dish:has_taste>
+		<dish:has_major>番茄</dish:has_major>
+		<dish:has_major>鸡蛋</dish:has_major>
+		<dish:has_major>面条</dish:has_major>
+		<dish:ingredient>番茄,鸡蛋,面条,香葱,蚝油,食油,食盐</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>1</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/椒麻牛肉">
+		<dish:name>椒麻牛肉</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">61</dish:price>
+		<dish:original_name>椒麻牛肉</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>麻辣</dish:has_taste>
+		<dish:has_major>牛肉</dish:has_major>
+		<dish:ingredient>青瓜,卤牛肉,陈醋,熟花生油,盐,糖,花椒油,辣椒粉,小葱</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/瓦罐牛肉">
+		<dish:name>瓦罐牛肉</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">59</dish:price>
+		<dish:original_name>瓦罐牛肉</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>咸鲜</dish:has_taste>
+		<dish:has_major>牛肉</dish:has_major>
+		<dish:ingredient>牛肉,葱,白萝卜,黄芪,姜,食盐</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/番茄焖牛腩">
+		<dish:name>番茄焖牛腩</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">62</dish:price>
+		<dish:original_name>番茄焖牛腩</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>家常</dish:has_taste>
+		<dish:has_major>牛肉</dish:has_major>
+		<dish:has_major>番茄</dish:has_major>
+		<dish:ingredient>牛腩,番茄,水,花椒,米酒,丁香,盐,姜,蒜</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>3</dish:for_n>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://csaixyz.org/dish/番茄炒鸡蛋">
+		<dish:name>番茄炒鸡蛋</dish:name>
+		<dish:weight>小</dish:weight>
+		<dish:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">32</dish:price>
+		<dish:original_name>番茄炒鸡蛋</dish:original_name>
+		<dish:dishtype>荤菜</dish:dishtype>
+		<dish:has_taste>家常</dish:has_taste>
+		<dish:has_major>番茄</dish:has_major>
+		<dish:has_major>鸡蛋</dish:has_major>
+		<dish:ingredient>番茄,鸡蛋,葱,味精,盐</dish:ingredient>
+		<dish:has_temperature>热</dish:has_temperature>
+		<dish:for_n>2</dish:for_n>
+	</rdf:Description>
+
+</rdf:RDF>

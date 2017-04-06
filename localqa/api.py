@@ -7,6 +7,7 @@ from __future__ import unicode_literals
 import codecs
 import json
 import os
+import rdflib
 import re
 
 
@@ -62,7 +63,7 @@ class Api:
         dicts = os.path.join(rootdir, 'dict')
         nlufile = os.path.join(rootdir, 'nlu.txt')
         nlgfile = os.path.join(rootdir, 'nlg.txt')
-        print(dicts, nlufile, nlgfile)
+        kbfile = os.path.join(rootdir, 'kb.xml')
         self.keywords = {}
         self.patterns = []
         self.templates = []
@@ -107,6 +108,8 @@ class Api:
                         raise ValueError('nlg keywords cannot appearance twice')
                     required_keys.append(k)
                 self.templates.append((act_type, pattern, sorted(required_keys)))
+        self.graph = rdflib.Graph()
+        self.graph.load(kbfile)
 
     def nlu(self, s):
         s = ensure_unicode(s)
@@ -150,3 +153,7 @@ class Api:
                 results.append({'output': output, 'pattern': t[1]})
         result = {'error': 0, 'msg': results}
         return standard_dumps(result)
+
+    def kb(self, sparql):
+        qres = self.graph.query(sparql)
+        return {'errno': 0, 'msg': [{k: v.toPython() for k, v in row.asdict().items()} for row in qres]}
