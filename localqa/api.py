@@ -5,10 +5,13 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 import codecs
+import cPickle
+import hashlib
 import json
 import os
 import rdflib
 import re
+import tempfile
 
 
 def ensure_unicode(s):
@@ -108,8 +111,19 @@ class Api:
                         raise ValueError('nlg keywords cannot appearance twice')
                     required_keys.append(k)
                 self.templates.append((act_type, pattern, sorted(required_keys)))
-        self.graph = rdflib.Graph()
-        self.graph.load(kbfile)
+        with open(kbfile, 'rb') as f:
+            kbcontent = f.read()
+        kbsha256 = hashlib.sha256(kbcontent).hexdigest()
+        kbpicklefile = os.path.join(rootdir, 'kb-{0}.pkl'.format(kbsha256))
+        if os.path.exists(kbpicklefile):
+            with open(kbpicklefile, 'rb') as f:
+                self.graph = cPickle.load(f)
+        else:
+            print('converting {0} to {1}'.format(kbfile, kbpicklefile))
+            self.graph = rdflib.Graph()
+            self.graph.load(kbfile)
+            with open(kbpicklefile, 'wb') as f:
+                cPickle.dump(self.graph, f, protocol=2)
 
     def nlu(self, s):
         s = ensure_unicode(s)
@@ -155,5 +169,8 @@ class Api:
         return standard_dumps(result)
 
     def kb(self, sparql):
-        qres = self.graph.query(sparql)
+        try:
+            qres = self.graph.query(sparql)
+        except Exception as e:
+            return {'errno': 1, 'msg': ensure_unicode(e.__str__())}
         return {'errno': 0, 'msg': [{k: v.toPython() for k, v in row.asdict().items()} for row in qres]}
