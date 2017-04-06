@@ -73,7 +73,9 @@ class Api:
         for filename in os.listdir(dicts):
             with codecs.open(os.path.join(dicts, filename), 'r', 'utf8') as f:
                 v = [line.strip() for line in f]
-                self.keywords[filename] = v
+                v.sort(key=lambda s: (-len(s), s))
+                p = re.compile('({0})'.format('|'.join(v)))
+                self.keywords[filename] = (v, p)
         with codecs.open(nlufile, 'r', 'utf8') as f:
             for line in f:
                 v = line.strip().split('\t')
@@ -82,20 +84,16 @@ class Api:
                 pattern, action = v[:2]
                 level = int(v[2]) if len(v) > 2 else 0
                 replaced = pattern
-                now = 0
+                now = [0]
                 kw_table = {}
-                for kw, value in self.keywords.items():
-                    while True:
-                        last_replaced = replaced
-                        nowtext = 'p{0}'.format(now)
-                        target = '(?P<{0}>{1})'.format(nowtext, '|'.join(value))
-                        replaced = replaced.replace(kw, target, 1)
-                        if replaced == last_replaced:
-                            break
-                        kw_table[nowtext] = kw
-                        now += 1
-                        if now >= 10:
-                            raise ValueError('nlu too many keywords')
+                r = re.compile('|'.join(self.keywords.keys()))
+                def g(m):
+                    kw = m.group(0)
+                    nowtext = '__{0}_'.format(now[0])
+                    kw_table[nowtext] = kw
+                    now[0] += 1
+                    return '(?P<{0}>{1})'.format(nowtext, '|'.join(self.keywords[kw][0]))
+                replaced = r.sub(g, pattern)
                 self.patterns.append([re.compile(replaced), pattern, action, level, kw_table])
         with codecs.open(nlgfile, 'r', 'utf8') as f:
             bracket = re.compile('<(\w+)>')
@@ -107,9 +105,8 @@ class Api:
                 required_keys = []
                 for m in bracket.finditer(pattern):
                     k = m.group(1)
-                    if k in required_keys:
-                        raise ValueError('nlg keywords cannot appearance twice')
-                    required_keys.append(k)
+                    if k not in required_keys:
+                        required_keys.append(k)
                 self.templates.append((act_type, pattern, sorted(required_keys)))
         with open(kbfile, 'rb') as f:
             kbcontent = f.read()
@@ -136,7 +133,7 @@ class Api:
                 matched = {}
                 groupdict = m.groupdict()
                 for name, value in groupdict.items():
-                    keyword = kw_table[name]
+                    keyword = kw_table[name] if name in kw_table else name
                     if keyword not in matched:
                         matched[keyword] = value
                     elif list == type(matched[keyword]):
@@ -152,19 +149,21 @@ class Api:
             for kw, value in d['matches'].items():
                 m[kw] = value
             patternlist.append(m)
-        result = {'error': 0, 'msg': {'patternlist': patternlist}}
+        keywords = dict()
+        for kw, value in self.keywords.items():
+            p = value[1]
+            all = p.findall(s)
+            if 0 < len(all):
+                keywords[kw] = all
+        result = {'error': 0, 'msg': {'patternlist': patternlist, 'keywords': keywords}}
         return standard_dumps(result)
 
     def nlg(self, act_type, kw):
         kw = {ensure_unicode(k): ensure_unicode(v) for k, v in kw.items()}
         sorted_keys = sorted(kw.keys())
-        results = list()
-        for t in self.templates:
-            if t[0] == act_type and t[2] == sorted_keys:
-                output = t[1]
-                for k, v in kw.items():
-                    output = output.replace('<{0}>'.format(k), v, 1)
-                results.append({'output': output, 'pattern': t[1]})
+        r = re.compile('<({0})>'.format('|'.join(sorted_keys)))
+        results = [{'output': r.sub(lambda m: kw[m.group(1)], t[1]), 'pattern': t[1]}
+                for t in filter(lambda t: t[0] == act_type and t[2] == sorted_keys, self.templates)]
         result = {'error': 0, 'msg': results}
         return standard_dumps(result)
 
