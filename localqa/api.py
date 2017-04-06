@@ -170,6 +170,7 @@ class Api:
     def kb(self, sparql):
         try:
             qres = self.graph.query(sparql)
+            result = {'errno': 0, 'msg': [{k: v.toPython() for k, v in row.asdict().items()} for row in qres]}
         except Exception as e:
-            return {'errno': 1, 'msg': ensure_unicode(e.__str__())}
-        return {'errno': 0, 'msg': [{k: v.toPython() for k, v in row.asdict().items()} for row in qres]}
+            result = {'errno': 1, 'msg': ensure_unicode(e.__str__())}
+        return standard_dumps(result)
