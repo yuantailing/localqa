@@ -85,7 +85,7 @@ class Api:
                 level = int(v[2]) if len(v) > 2 else 0
                 now = [0]
                 kw_table = {}
-                r = re.compile('|'.join(self.keywords.keys()))
+                r = re.compile('|'.join([re.escape(s) for s in self.keywords.keys()]))
                 def g(m):
                     kw = m.group(0)
                     nowtext = '__{0}_'.format(now[0])
@@ -95,7 +95,7 @@ class Api:
                 replaced = r.sub(g, pattern)
                 self.patterns.append([re.compile(replaced), pattern, action, level, kw_table])
         with codecs.open(nlgfile, 'r', 'utf8') as f:
-            bracket = re.compile('<(\w+)>')
+            bracket = re.compile('<([^>]+)>')
             for line in f:
                 v = line.strip().split('\t')
                 if len(v) <= 1:
@@ -157,7 +157,7 @@ class Api:
     def nlg(self, act_type, kw):
         kw = {ensure_unicode(k): ensure_unicode(v) for k, v in kw.items()}
         sorted_keys = sorted(kw.keys())
-        r = re.compile('<({0})>'.format('|'.join(sorted_keys)))
+        r = re.compile('<({0})>'.format('|'.join([re.escape(s) for s in sorted_keys])))
         results = [{'output': r.sub(lambda m: kw[m.group(1)], t[1]), 'pattern': t[1]}
                 for t in filter(lambda t: t[0] == act_type and t[2] == sorted_keys, self.templates)]
         result = {'error': 0, 'msg': results}
