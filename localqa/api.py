@@ -15,7 +15,7 @@ import tempfile
 
 
 def ensure_unicode(s):
-    return s if type(s) == type(u'') else s.decode('utf8')
+    return s if type(s) is type(u'') else s.decode('utf8')
 
 def standard_dumps(obj):
     return obj
@@ -137,7 +137,7 @@ class Api:
                     keyword = kw_table[name] if name in kw_table else name
                     if keyword not in matched:
                         matched[keyword] = value
-                    elif list == type(matched[keyword]):
+                    elif type(matched[keyword]) is list:
                         matched[keyword].append(value)
                     else:
                         matched[keyword] = [matched[keyword], value]
