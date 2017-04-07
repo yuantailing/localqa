@@ -70,11 +70,11 @@ class Api:
         self.keywords = {}
         self.patterns = []
         self.templates = []
-        for filename in os.listdir(dicts):
+        for filename in sorted(os.listdir(dicts)):
             with codecs.open(os.path.join(dicts, filename), 'r', 'utf8') as f:
                 v = [line.strip() for line in f]
                 v.sort(key=lambda s: (-len(s), s))
-                p = re.compile('({0})'.format('|'.join(v)))
+                p = re.compile('|'.join(v))
                 self.keywords[filename] = (v, p)
         with codecs.open(nlufile, 'r', 'utf8') as f:
             for line in f:
@@ -83,7 +83,6 @@ class Api:
                     continue
                 pattern, action = v[:2]
                 level = int(v[2]) if len(v) > 2 else 0
-                replaced = pattern
                 now = [0]
                 kw_table = {}
                 r = re.compile('|'.join(self.keywords.keys()))
@@ -124,7 +123,7 @@ class Api:
 
     def nlu(self, s):
         s = ensure_unicode(s)
-        results = list()
+        patternlist = list()
         for t in self.patterns:
             pattern = t[0]
             m = pattern.search(s)
@@ -133,6 +132,8 @@ class Api:
                 matched = {}
                 groupdict = m.groupdict()
                 for name, value in groupdict.items():
+                    if value is None:
+                        continue
                     keyword = kw_table[name] if name in kw_table else name
                     if keyword not in matched:
                         matched[keyword] = value
@@ -140,15 +141,10 @@ class Api:
                         matched[keyword].append(value)
                     else:
                         matched[keyword] = [matched[keyword], value]
-                results.append({'matches': matched, 'matched_length': len(m.group(0)), 'pattern': t[1:]})
-        results.sort(key=lambda d: (-d['pattern'][2], -d['matched_length']))
-        patternlist = list()
-        for d in results:
-            m = {'_act_type': d['pattern'][1], '_level': d['pattern'][2], '_pattern': d['pattern'][0],
-                '_matched_length': d['matched_length']}
-            for kw, value in d['matches'].items():
-                m[kw] = value
-            patternlist.append(m)
+                line = t[1:]
+                matched.update({'_act_type': line[1], '_level': line[2], '_pattern': line[0], '_matched_length': len(m.group(0))})
+                patternlist.append(matched)
+        patternlist.sort(key=lambda d: (-d['_level'], -d['_matched_length']))
         keywords = dict()
         for kw, value in self.keywords.items():
             p = value[1]
