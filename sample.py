@@ -1,13 +1,13 @@
 #coding=utf8
 import json
-import localqa
+import api as localapi
 
 def friendly_display(obj):
     print json.dumps(obj, ensure_ascii=False, indent=None, sort_keys=True)
 
 def main():
-    api = localqa.api.Api('config.sample')
-    api2 = localqa.api.RemoteApi('http://115.182.62.171:9000/api', 'sg849KLWNETy6215zc9U1CapFlkt4JmC')
+    api = localapi.Api('config.sample')
+    api2 = localapi.RemoteApi('http://115.182.62.171:9000/api', 'sg849KLWNETy6215zc9U1CapFlkt4JmC')
 
     query = '有什么不辣的川菜吗'
     friendly_display(api.nlu(query))
