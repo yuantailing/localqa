@@ -5,7 +5,7 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 import codecs
-import cPickle
+import six.moves.cPickle as cPickle
 import hashlib
 import json
 import os

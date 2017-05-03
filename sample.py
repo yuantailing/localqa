@@ -3,7 +3,7 @@ import json
 import api as localapi
 
 def friendly_display(obj):
-    print json.dumps(obj, ensure_ascii=False, indent=None, sort_keys=True)
+    print(json.dumps(obj, ensure_ascii=False, indent=None, sort_keys=True))
 
 def main():
     api = localapi.Api('config.sample')
