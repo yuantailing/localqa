@@ -62,16 +62,28 @@ class RemoteApi:
 
 
 class Api:
-    def __init__(self, rootdir):
-        dicts = os.path.join(rootdir, 'dict')
-        nlufile = os.path.join(rootdir, 'nlu.txt')
-        nlgfile = os.path.join(rootdir, 'nlg.txt')
-        kbfile = os.path.join(rootdir, 'kb.xml')
+    def __init__(self, rootdir, auto_reload=True):
+        self.rootdir = rootdir
+        self.auto_reload = auto_reload
+        self.update_time = dict()
+        self.reload_nlu()
+        self.reload_nlg()
+        self.reload_kb()
+
+    def reload_nlu(self):
+        dicts = os.path.join(self.rootdir, 'dict')
+        nlufile = os.path.join(self.rootdir, 'nlu.txt')
+        not_updated = self.update_time.get(nlufile) == os.path.getmtime(nlufile)
+        for filename in sorted(os.listdir(dicts)):
+            fn = os.path.join(dicts, filename)
+            not_updated = not_updated and self.update_time.get(fn) == os.path.getmtime(fn)
+        if not_updated: return
+        self.update_time[nlufile] = os.path.getmtime(nlufile)
         self.keywords = {}
         self.patterns = []
-        self.templates = []
         for filename in sorted(os.listdir(dicts)):
-            with codecs.open(os.path.join(dicts, filename), 'r', 'utf8') as f:
+            fn = os.path.join(dicts, filename)
+            with codecs.open(fn, 'r', 'utf8') as f:
                 v = [line.strip() for line in f]
                 v.sort(key=lambda s: (-len(s), s))
                 p = re.compile('|'.join(v))
@@ -94,6 +106,12 @@ class Api:
                     return '(?P<{0}>{1})'.format(nowtext, '|'.join(self.keywords[kw][0]))
                 replaced = r.sub(g, pattern)
                 self.patterns.append([re.compile(replaced), pattern, action, level, kw_table])
+
+    def reload_nlg(self):
+        nlgfile = os.path.join(self.rootdir, 'nlg.txt')
+        if self.update_time.get(nlgfile) == os.path.getmtime(nlgfile): return
+        self.update_time[nlgfile] = os.path.getmtime(nlgfile)
+        self.templates = []
         with codecs.open(nlgfile, 'r', 'utf8') as f:
             bracket = re.compile('<([^>]+)>')
             for line in f:
@@ -107,10 +125,15 @@ class Api:
                     if k not in required_keys:
                         required_keys.append(k)
                 self.templates.append((act_type, pattern, sorted(required_keys)))
+
+    def reload_kb(self):
+        kbfile = os.path.join(self.rootdir, 'kb.xml')
+        if self.update_time.get(kbfile) == os.path.getmtime(kbfile): return
+        self.update_time[kbfile] = os.path.getmtime(kbfile)
         with open(kbfile, 'rb') as f:
             kbcontent = f.read()
         kbsha256 = hashlib.sha256(kbcontent).hexdigest()
-        kbpicklefile = os.path.join(rootdir, 'kb-{0}.pkl'.format(kbsha256))
+        kbpicklefile = os.path.join(self.rootdir, 'kb-{0}.pkl'.format(kbsha256))
         if os.path.exists(kbpicklefile):
             with open(kbpicklefile, 'rb') as f:
                 self.graph = cPickle.load(f)
@@ -122,6 +145,7 @@ class Api:
                 cPickle.dump(self.graph, f, protocol=2)
 
     def nlu(self, s):
+        if self.auto_reload: self.reload_nlu()
         s = ensure_unicode(s)
         patternlist = list()
         for t in self.patterns:
@@ -155,6 +179,7 @@ class Api:
         return standard_dumps(result)
 
     def nlg(self, act_type, kw):
+        if self.auto_reload: self.reload_nlg()
         kw = {ensure_unicode(k): ensure_unicode(v) for k, v in kw.items()}
         sorted_keys = sorted(kw.keys())
         r = re.compile('<({0})>'.format('|'.join([re.escape(s) for s in sorted_keys])))
@@ -164,6 +189,7 @@ class Api:
         return standard_dumps(result)
 
     def kb(self, sparql):
+        if self.auto_reload: self.reload_kb()
         try:
             qres = self.graph.query(sparql)
             result = {'errno': 0, 'msg': [{k: v.toPython() for k, v in row.asdict().items()} for row in qres]}
