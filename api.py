@@ -84,28 +84,42 @@ class Api:
         for filename in sorted(os.listdir(dicts)):
             fn = os.path.join(dicts, filename)
             with codecs.open(fn, 'r', 'utf8') as f:
-                v = [line.strip() for line in f]
-                v.sort(key=lambda s: (-len(s), s))
-                p = re.compile('|'.join(v))
+                v = []
+                for line in f:
+                    ab = line.strip().split('\t')
+                    v.append((ab[0], ab[1] if 1 < len(ab) else None))
+                v.sort(key=lambda t: (-len(t[0]), t[0]))
+                p = re.compile('|'.join([t[0] for t in v]))
                 self.keywords[filename] = (v, p)
         with codecs.open(nlufile, 'r', 'utf8') as f:
             for line in f:
+                s = line.strip()
+                if not s: continue
                 v = line.strip().split('\t')
-                if len(v) <= 1:
-                    continue
+                assert len(v) > 1, 'nlu file error line: {1}'.format(nlufile, line)
                 pattern, action = v[:2]
                 level = int(v[2]) if len(v) > 2 else 0
                 now = [0]
                 kw_table = {}
+                regular_table = {}
                 r = re.compile('|'.join([re.escape(s) for s in self.keywords.keys()]))
                 def g(m):
                     kw = m.group(0)
                     nowtext = '__{0}_'.format(now[0])
                     kw_table[nowtext] = kw
+                    words_array = []
+                    for idx, t in enumerate(self.keywords[kw][0]):
+                        s, regular = t
+                        if regular:
+                            regular_p = '{0}_{1}_'.format(nowtext, idx)
+                            regular_table[regular_p] = (kw, regular)
+                            words_array.append('(?P<{0}>{1})'.format(regular_p, s))
+                        else:
+                            words_array.append(s)
                     now[0] += 1
-                    return '(?P<{0}>{1})'.format(nowtext, '|'.join(self.keywords[kw][0]))
+                    return '(?P<{0}>{1})'.format(nowtext, '|'.join(words_array))
                 replaced = r.sub(g, pattern)
-                self.patterns.append([re.compile(replaced), pattern, action, level, kw_table])
+                self.patterns.append([re.compile(replaced), pattern, action, level, kw_table, regular_table])
 
     def reload_nlg(self):
         nlgfile = os.path.join(self.rootdir, 'nlg.txt')
@@ -153,10 +167,17 @@ class Api:
             m = pattern.search(s)
             if m is not None:
                 kw_table = t[4]
+                regular_table = t[5]
                 matched = {}
+                regular = {}
                 groupdict = m.groupdict()
                 for name, value in groupdict.items():
                     if value is None:
+                        continue
+                    if name in regular_table:
+                        keyword, regular_name = regular_table[name]
+                        if keyword not in regular: regular[keyword] = []
+                        regular[keyword].append(regular_name)
                         continue
                     keyword = kw_table[name] if name in kw_table else name
                     if keyword not in matched:
@@ -166,7 +187,7 @@ class Api:
                     else:
                         matched[keyword] = [matched[keyword], value]
                 line = t[1:]
-                matched.update({'_act_type': line[1], '_level': line[2], '_pattern': line[0], '_matched_length': len(m.group(0))})
+                matched.update({'_act_type': line[1], '_level': line[2], '_pattern': line[0], '_matched_length': len(m.group(0)), '_regular': regular})
                 patternlist.append(matched)
         patternlist.sort(key=lambda d: (-d['_level'], -d['_matched_length']))
         keywords = dict()
