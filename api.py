@@ -71,6 +71,10 @@ class Api:
     def reload_nlu(self):
         dicts = os.path.join(self.rootdir, 'dict')
         nlufile = os.path.join(self.rootdir, 'nlu.txt')
+        if not os.path.exists(nlufile):
+            self.keywords = {}
+            self.patterns = []
+            return
         not_updated = self.update_time.get(nlufile) == os.path.getmtime(nlufile)
         for filename in sorted(os.listdir(dicts)):
             fn = os.path.join(dicts, filename)
@@ -121,6 +125,9 @@ class Api:
 
     def reload_nlg(self):
         nlgfile = os.path.join(self.rootdir, 'nlg.txt')
+        if not os.path.exists(nlgfile):
+            self.templates = []
+            return
         if self.update_time.get(nlgfile) == os.path.getmtime(nlgfile): return
         self.update_time[nlgfile] = os.path.getmtime(nlgfile)
         self.templates = []
@@ -140,6 +147,9 @@ class Api:
 
     def reload_kb(self):
         kbfile = os.path.join(self.rootdir, 'kb.xml')
+        if not os.path.exists(kbfile):
+            self.graph = rdflib.Graph()
+            return
         if self.update_time.get(kbfile) == os.path.getmtime(kbfile): return
         self.update_time[kbfile] = os.path.getmtime(kbfile)
         with open(kbfile, 'rb') as f:
