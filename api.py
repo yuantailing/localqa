@@ -43,9 +43,7 @@ class RemoteApi:
             patternlist[i]['_matched_length'] = int(patternlist[i]['_matched_length'])
             for k, v in patternlist[i].items():
                 if not k.startswith('_'):
-                    sp = v.split(',')
-                    if 1 != len(sp):
-                        patternlist[i][k] = sp
+                    patternlist[i][k] = v.split(',')
         return standard_dumps(obj)
 
     def nlg(self, act_type, kw):
@@ -180,12 +178,8 @@ class Api:
                         regular[keyword].append(regular_name)
                         continue
                     keyword = kw_table[name] if name in kw_table else name
-                    if keyword not in matched:
-                        matched[keyword] = value
-                    elif type(matched[keyword]) is list:
-                        matched[keyword].append(value)
-                    else:
-                        matched[keyword] = [matched[keyword], value]
+                    if keyword not in matched: matched[keyword] = []
+                    matched[keyword].append(value)
                 line = t[1:]
                 matched.update({'_act_type': line[1], '_level': line[2], '_pattern': line[0], '_matched_length': len(m.group(0)), '_regular': regular})
                 patternlist.append(matched)
