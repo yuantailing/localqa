@@ -93,6 +93,7 @@ class Api:
                 v.sort(key=lambda t: (-len(t[0]), t[0]))
                 p = re.compile('|'.join([t[0] for t in v]))
                 self.keywords[filename] = (v, p)
+            self.update_time[fn] = os.path.getmtime(fn)
         with codecs.open(nlufile, 'r', 'utf8') as f:
             for line in f:
                 s = line.strip()
